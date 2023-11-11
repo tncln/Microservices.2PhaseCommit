@@ -4,6 +4,7 @@ using Microservices._2PhaseCommit.Coordinator.Models.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Microservices._2PhaseCommit.Coordinator.Migrations
 {
     [DbContext(typeof(TwoPhaseCommitContext))]
-    partial class TwoPhaseCommitContextModelSnapshot : ModelSnapshot
+    [Migration("20231111201414_mg_2")]
+    partial class mg_2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
