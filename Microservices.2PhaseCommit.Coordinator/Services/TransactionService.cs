@@ -125,6 +125,7 @@ namespace Microservices._2PhaseCommit.Coordinator.Services
                     throw;
                 }
             }
+            await _context.SaveChangesAsync();
         }
     }
 }
